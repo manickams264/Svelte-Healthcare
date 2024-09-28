@@ -1,0 +1,164 @@
+/* Root colors */
+:root {
+	--background-color: linear-gradient(135deg, #e0f7fa 70%, #3498db 20%, #f39c12 10%);
+	--primary-color: #3498db; /* Main buttons and headings */
+	--accent-color: #f39c12;  /* Delete buttons */
+	--text-color: #2c3e50;    /* General text */
+	--card-bg-color: #ffffff; /* Service cards */
+	--button-bg-color: var(--primary-color);
+	--button-hover-bg-color: #2980b9;
+	--button-secondary-bg-color: var(--accent-color);
+	--box-shadow-color: rgba(0, 0, 0, 0.1);
+	--box-shadow-hover: rgba(0, 0, 0, 0.2);
+  }
+  
+  body {
+	background: var(--background-color);
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	color: var(--text-color);
+	animation: backgroundFade 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes backgroundFade {
+	from {
+	  background-position: 0% 50%;
+	}
+	to {
+	  background-position: 100% 50%;
+	}
+  }
+  
+  .container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 40px 20px;
+  }
+  
+  h2 {
+	color: var(--primary-color);
+	font-size: 3em;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	letter-spacing: 3px;
+	animation: slideIn 1s ease-out;
+  }
+  
+  .form {
+	margin-bottom: 40px;
+	background-color: var(--card-bg-color);
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0 10px 20px var(--box-shadow-color);
+	transition: all 0.3s ease;
+  }
+  
+  input {
+	padding: 15px;
+	margin: 10px;
+	border: 2px solid #ddd;
+	border-radius: 10px;
+	font-size: 1.2em;
+	outline: none;
+	width: calc(30% - 20px);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+  }
+  
+  input:focus {
+	border-color: var(--primary-color);
+	box-shadow: 0px 0px 10px var(--button-bg-color);
+  }
+  
+  button {
+	padding: 15px 25px;
+	margin-left: 10px;
+	background-color: var(--button-bg-color);
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-size: 1.1em;
+	box-shadow: 0px 5px 10px var(--box-shadow-color);
+  }
+  
+  button:hover {
+	background-color: var(--button-hover-bg-color);
+	transform: translateY(-3px);
+	box-shadow: 0px 10px 15px var(--box-shadow-hover);
+  }
+  
+  .gradient-btn {
+	background: linear-gradient(135deg, #3498db, #2980b9);
+  }
+  
+  .gradient-btn-secondary {
+	background: linear-gradient(135deg, #f39c12, #e67e22);
+  }
+  
+  button:active {
+	transform: translateY(2px);
+  }
+  
+  .secondary-button {
+	background-color: var(--button-secondary-bg-color);
+  }
+  
+  .service {
+	margin-bottom: 25px;
+	padding: 20px;
+	border-radius: 15px;
+	background-color: var(--card-bg-color);
+	box-shadow: 0px 4px 15px var(--box-shadow-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service:hover {
+	transform: scale(1.05);
+	box-shadow: 0px 8px 25px var(--box-shadow-hover);
+  }
+  
+  .service-content {
+	flex-grow: 1;
+	margin-right: 20px;
+  }
+  
+  .service strong {
+	display: block;
+	font-size: 1.8em;
+	margin-bottom: 10px;
+	color: var(--primary-color);
+	text-transform: uppercase;
+  }
+  
+  .service-description {
+	font-size: 1.1em;
+	color: #666;
+	margin-top: 5px;
+  }
+  
+  .service-price {
+	color: #27ae60;
+	font-weight: bold;
+	font-size: 1.3em;
+	margin-top: 10px;
+  }
+  
+  @keyframes slideIn {
+	from {
+	  transform: translateX(-100%);
+	  opacity: 0;
+	}
+	to {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+  
